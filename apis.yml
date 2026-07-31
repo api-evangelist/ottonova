@@ -1,8 +1,29 @@
 aid: ottonova
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ottonova.png
 name: Ottonova
-description: 'Ottonova is a company surfaced as a portfolio company of earlybird, hv-capital and added
-  to the API Evangelist network as a stub for enrichment. Sector: insurtech. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Ottonova is a Munich-based digital private health insurance provider (private
+  Krankenversicherung) founded in 2015, positioned as "the insurance for the
+  mobile age." It sells private full health insurance and supplementary dental
+  and hospital coverage to consumers in Germany, delivering onboarding, claims,
+  a concierge medical service and digital health records through its mobile app
+  rather than through a public developer API. Ottonova is backed by venture
+  investors including Earlybird and HV Capital and operates in the insurtech
+  sector. This API Evangelist profile was created as a portfolio-lead stub and
+  has been through one enrichment pass: probing confirmed a consumer web
+  presence with a published RFC 9116 security.txt but no public API surface
+  (no developer portal, OpenAPI, OAuth/OpenID metadata, or API catalog).
 url: https://raw.githubusercontent.com/api-evangelist/ottonova/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,13 +34,54 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Insurtech
+- Insurance
+- Health Insurance
+- Private Health Insurance
+- Germany
+- Fintech
 apis: []
+common:
+- name: Website
+  type: Website
+  url: https://www.ottonova.de
+- name: Privacy Policy
+  type: PrivacyPolicy
+  url: https://www.ottonova.de/datenschutz
+- name: Legal Notice (Impressum)
+  type: TermsOfService
+  url: https://www.ottonova.de/impressum
+- name: Support
+  type: Support
+  url: mailto:support@ottonova.de
+- name: Magazine (Blog)
+  type: Blog
+  url: https://www.ottonova.de/magazin
+- name: Careers
+  type: Jobs
+  url: https://www.ottonova.de/jobs
+- name: security.txt
+  type: SecurityTxt
+  url: well-known/ottonova-security.txt
+- name: Well-Known Endpoints
+  type: WellKnown
+  url: well-known/ottonova-well-known.yml
+- name: Vulnerability Disclosure
+  type: VulnerabilityDisclosure
+  url: security/ottonova-vulnerability-disclosure.yml
+- name: Security Contact
+  type: Security
+  url: security/ottonova-vulnerability-disclosure.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1

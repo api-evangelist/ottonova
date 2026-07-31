@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.ottonova.de/.well-known/
+name: ottonova Well-Known Endpoints
+description: >-
+  Result of probing standard /.well-known/ endpoints on the ottonova host.
+  Only /.well-known/security.txt is published; no OpenID, OAuth authorization
+  server metadata, api-catalog, or ai-plugin manifests are exposed (ottonova is
+  a consumer-facing German private health insurance provider with no public API).
+host: https://www.ottonova.de
+endpoints:
+- path: /.well-known/security.txt
+  status: 200
+  file: ottonova-security.txt
+  type: SecurityTxt
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
