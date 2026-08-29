@@ -36,6 +36,9 @@ description: >-
   presence with a published RFC 9116 security.txt but no public API surface
   (no developer portal, OpenAPI, OAuth/OpenID metadata, or API catalog).
 url: https://raw.githubusercontent.com/api-evangelist/ottonova/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "This API Evangelist profile was created as a portfolio-lead stub and has been through one enrichment pass: probing confirmed a consumer web presence with a published RFC 9116 security.txt but no publi"
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
