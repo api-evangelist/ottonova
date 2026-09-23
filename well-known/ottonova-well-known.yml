@@ -2,11 +2,9 @@ generated: '2026-07-20'
 method: searched
 source: https://www.ottonova.de/.well-known/
 name: ottonova Well-Known Endpoints
-description: >-
-  Result of probing standard /.well-known/ endpoints on the ottonova host.
-  Only /.well-known/security.txt is published; no OpenID, OAuth authorization
-  server metadata, api-catalog, or ai-plugin manifests are exposed (ottonova is
-  a consumer-facing German private health insurance provider with no public API).
+description: Result of probing standard /.well-known/ endpoints on the ottonova host. Only /.well-known/security.txt
+  is published; no OpenID, OAuth authorization server metadata, api-catalog, or ai-plugin manifests are
+  exposed (ottonova is a consumer-facing German private health insurance provider with no public API).
 host: https://www.ottonova.de
 endpoints:
 - path: /.well-known/security.txt
@@ -21,3 +19,17 @@ endpoints:
   status: 404
 - path: /.well-known/ai-plugin.json
   status: 404
+hosts:
+- host: https://www.ottonova.de
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: ottonova-security.txt
+    type: SecurityTxt
+x-shape-fix:
+  converted: '2026-08-20'
+  from: endpoints
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent. Promoted ONLY the 2xx rows out of
+    the probe log; non-2xx probes are real negative results and were left in place, not converted into
+    documents.
